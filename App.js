@@ -1,3 +1,5 @@
+/*
+//  REACT PLAYER
 import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
 
@@ -93,3 +95,138 @@ const MusicPlayer = () => {
 };
 
 export default MusicPlayer;
+
+*/
+
+//****************************************************************************************************************************************** */
+    
+
+
+//LOGIN
+/*
+import React, { useState } from 'react';
+
+const Login = () => {
+  const [username, setUsername] = useState('');
+  const [passwords, setPasswords] = useState('');
+  const [data,setData] = useState([{}]);
+
+  const handleLogin = (event) => {
+    try {
+      fetch(`/Player1model/${username}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+      })
+        .then(response => response.json())
+        .then(data => {
+          // setData and other logic that depends on the fetched data should be inside this block
+          setData(data);
+          console.log("data=",data);
+          console.log("password=",data.password);
+          setPasswords(data.password);
+  
+          // Use the retrieved password as needed
+  
+          // Validate the entered password
+          if (passwords === data.password) {
+            // Password is correct
+            alert('Login Successful');
+          } else {
+            // Password is incorrect
+            alert('Invalid Error');
+          }
+        })
+        .catch(error => console.error(error));
+    } catch (error) {
+      // Handle errors (e.g., user not found)
+      alert('Some error');
+    }
+  };
+  
+
+  return (
+    <div>
+      <h2>Login</h2>
+      <div>
+        <label>Username:</label>
+        <input
+          type="text"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+      </div>
+      <div>
+        <label>Password:</label>
+        <input
+          type="password"
+          value={passwords}
+          onChange={(e) => setPasswords(e.target.value)}
+        />
+      </div>
+      <div>
+        <button onClick={handleLogin}>Submit</button>
+      </div>
+    </div>
+  );
+};
+
+export default Login;
+*/
+
+
+//********************************************************************************************************************************************** */
+
+
+/*
+// SEARCH SONG
+import React, { useState } from 'react';
+
+const MusicApp = () => {
+  const [songName, setSongName] = useState('');
+  const [responseFromSpringBoot, setResponseFromSpringBoot] = useState('');
+
+  const handleGetSongDetails = async () => {
+    try {
+      const response = await fetch(`http://localhost:8080/api/${songName}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+      });
+
+      const data = await response.text();
+      setResponseFromSpringBoot(data);
+      console.log("hello");
+      console.log(responseFromSpringBoot);
+
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
+  return (
+    <div>
+      <h2>Music App</h2>
+      <div>
+        <label>Song Name:</label>
+        <input
+          type="text"
+          value={songName}
+          onChange={(e) => setSongName(e.target.value)}
+        />
+      </div>
+      <div>
+        <button onClick={handleGetSongDetails}>Get Song Details</button>
+      </div>
+      <div>
+        <p>Response from Spring Boot: {responseFromSpringBoot}</p>
+      </div>
+    </div>
+  );
+};
+
+export default MusicApp;
+
+*/
