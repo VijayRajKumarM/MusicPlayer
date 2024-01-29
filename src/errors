@@ -1,0 +1,2 @@
+//react router must be 6 to use the comp useNavigate
+//useNavigate we should create a object and call function only with the router config

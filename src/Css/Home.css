@@ -1,0 +1,77 @@
+.main
+{
+    position: relative;
+    background-color: blanchedalmond;
+    width: 100%;
+    height:100vh;
+}
+.top
+{
+    position: relative;
+    height: 15%;
+    background-color: #904A7A;
+}
+
+.top #name
+{
+    position: relative;
+    padding-top: 1%;
+}
+
+.top #searching #s
+{
+    position:absolute;right:50%;
+    bottom: 50%;
+    /*border-radius: 15%;*/
+    height:25%;
+    width: 20%;
+ 
+}
+
+.top #searching #b
+{
+    position:absolute;right:45%;
+    bottom: 50%;
+    height:30%;
+}
+
+.top #userdet
+{
+    position: absolute;
+    bottom: 45%;
+    right:30%;
+    height: 40%;
+    width: 3%;
+    background-image: url('/src/assets/alb.jpg');
+    border-radius: 20px;
+}
+
+.top #logout
+{
+    position: absolute;
+    bottom: 45%;
+    right:25%;
+    height: 40%;
+    width: 3%;
+    border-radius: 20px;
+}
+
+#playlist{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #B169CC;
+}
+
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Adjust as needed */
+}
+
+/* Style for individual cards (adjust as needed) */
+.display-card {
+    width: 200px;
+    margin: 10px;
+}
